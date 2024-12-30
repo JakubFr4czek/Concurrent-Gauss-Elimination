@@ -1,17 +1,16 @@
 # Concurrent Gaussian Elimination
 Projekt wykorzystuje teorię śladów do współbieżnego rozwiązania układu równań metodą Eliminacji Gaussa.
 
-# Opis zawartości repozytorium
+# Opis Zawartości Repozytorium
 
-Projekt został napisany w języku Python. Wykorzystuje także sprawdzarkę napisaną w języku Java. Opis wykorzystanych
-modułów znajduje się w pliku environment.yml.
+Projekt został napisany w języku Python. Opis wykorzystanych modułów znajduje się w pliku environment.yml.
 
 1) input - folder zawierający dane wejściowe
 2) output - folder zawierający pliki:
     1) gauss_output.txt - zawiera rozwiązanie układu równań
     2) traces_theory_output.txt - zawiera wyznaczony alfabet w sensie teorii śladów, relację zależności, słowo oraz klasy Foaty
     3) diekert_graph.png - wyrenderowany graf Diekerta dla zadanego układu równań
-3) checker.py - moduł wykorzystujący sprawdzarkę do oceny poprawności kodu (Patrz: sekcja Uruchomienie checkera)
+3) checker.py - moduł wykorzystujący sprawdzarkę do oceny poprawności kodu (Patrz: sekcja Uruchomienie Checkera)
 4) main.py - główny moduł, wywołuje funkcje wyznaczające obiekty matematyczne związane z teorią śladów oraz wyznacza rozwiązanie układu równań
 5) scheduler.py - moduł odpowiedzialny za współbieżne wyznaczenie macierzy trójkątnej górnej przy wykorzystaniu rdzeni CUDA i wyznaczenie rozwiązania układu równań
 6) traces_theory.py - moduł odpowiedzialny za wyznaczenie obiektów matematycznych związanych z teorią śladów
@@ -40,7 +39,7 @@ funkcji traces_run w pliku main.py.
 Funkcje traces_run i scheduler_run w pliku main.py działają niezależnie od siebie, pierwsza jest odpowiedzialna za wyznaczenie
 obiektów matematycznych związanych z teorią śladów, a druga za rozwiązanie układu równań (oczywiście wyznaczając wcześniej klasy Foaty).
 
-# Uruchomienie checkera
+# Uruchomienie Checkera
 
 W celu skorzystania ze sprawdzarki wymagana jest instalacja Javy (przetesowane na wersji 21.0.2). Checker automatycznie
 kompiluje i uruchamia sprawdzarkę korzystając z poleceń 'javac' i 'java'.
