@@ -130,4 +130,4 @@ def scheduler_run(input, output):
 
     M, X = gaussian_elimination_cuda(matrix, vector, foaty)
 
-    save_gauss_result(M, X, output)
+    save_gauss_result(M, X, output + "/gauss.txt")

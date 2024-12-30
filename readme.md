@@ -28,7 +28,7 @@ W celu zainstalowania wymaganych zależności należy w terminalu kolejno wpisa�
 cd "Concurrent Gauss Elimination"
 conda env create -f environment.yml
 conda activate Concurrent-Gauss-Elimination
-python main.py input/example_input.txt output/gauss_output.txt
+python main.py input/example_input.txt output
 ```
 
 Domyślnie graf Diekerta nie jest rysowany dla macierzy o rozmiarach większych od 10 bo jest on nieczytelny,

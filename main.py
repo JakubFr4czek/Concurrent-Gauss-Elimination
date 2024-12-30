@@ -15,11 +15,11 @@ if len(sys.argv) == 3:
     output = sys.argv[2]
 elif len(sys.argv == 1):
     input = 'input/example_input.txt'
-    output = 'output/gauss_output.txt'
+    output = 'output'
 else:
     print("Użycie: python main.py <input_file> <output_file>")
     sys.exit(1)
 
-traces_run(input, force_graph = False)
+traces_run(input, output, force_graph = False)
 
 scheduler_run(input, output)

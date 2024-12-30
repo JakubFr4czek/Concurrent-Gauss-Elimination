@@ -79,7 +79,7 @@ def save_graph_as_DOT(G, alphabet, filename = "tmp/G.dot"):
         file.write("}\n")
     
     
-def save_traces_theory_output(alphabet, D, w, foaty, filename = 'output/traces_theory_output.txt'):
+def save_traces_theory_output(alphabet, D, w, foaty, filename):
     '''
     Funkcja zapisuje do pliku:
     - Alfabet w sensie teori śladów

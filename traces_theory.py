@@ -3,9 +3,9 @@ from tools import calculate_operations, calculate_dependence, gauss_as_symbols, 
 from graphviz import Source
 import os
 
-def traces_run(filename, force_graph):
+def traces_run(input, output, force_graph):
     
-    matrix, vector = input_to_matrix(load_input(filename))
+    matrix, vector = input_to_matrix(load_input(input))
     operations = calculate_operations(matrix)
     symbols = gauss_as_symbols(matrix)
 
@@ -25,10 +25,10 @@ def traces_run(filename, force_graph):
         save_graph_as_DOT(G, alphabet, 'tmp/G.dot')
         
         source = Source.from_file('tmp/G.dot')
-        source.render('output/diekert_graph', format='png', view=False, cleanup=True)
+        source.render(output + '/diekert_graph', format='png', view=False, cleanup=True)
         
         os.remove('tmp/G.dot')
         os.rmdir('tmp')
 
-    save_traces_theory_output(alphabet, D, w, foaty)
+    save_traces_theory_output(alphabet, D, w, foaty, output + "/traces_theory_output.txt")
 
