@@ -1,7 +1,7 @@
 # Concurrent Gaussian Elimination
 Projekt wykorzystuje teorię śladów do współbieżnego rozwiązania układu równań metodą Eliminacji Gaussa.
 
-# Opis Zawartości Repozytorium
+# Opis zawartości repozytorium
 
 Projekt został napisany w języku Python. Opis wykorzystanych modułów znajduje się w pliku environment.yml.
 
@@ -10,7 +10,7 @@ Projekt został napisany w języku Python. Opis wykorzystanych modułów znajduj
     1) gauss_output.txt - zawiera rozwiązanie układu równań
     2) traces_theory_output.txt - zawiera wyznaczony alfabet w sensie teorii śladów, relację zależności, słowo oraz klasy Foaty
     3) diekert_graph.png - wyrenderowany graf Diekerta dla zadanego układu równań
-3) checker.py - moduł wykorzystujący sprawdzarkę do oceny poprawności kodu (Patrz: sekcja Uruchomienie Checkera)
+3) checker.py - moduł wykorzystujący sprawdzarkę do oceny poprawności kodu (Patrz: sekcja Uruchomienie checkera)
 4) main.py - główny moduł, wywołuje funkcje wyznaczające obiekty matematyczne związane z teorią śladów oraz wyznacza rozwiązanie układu równań
 5) scheduler.py - moduł odpowiedzialny za współbieżne wyznaczenie macierzy trójkątnej górnej przy wykorzystaniu rdzeni CUDA i wyznaczenie rozwiązania układu równań
 6) traces_theory.py - moduł odpowiedzialny za wyznaczenie obiektów matematycznych związanych z teorią śladów
@@ -24,10 +24,12 @@ posiadająca rdzenie CUDA. Kompatybilne karty można znaleźć tutaj: https://de
 
 W celu zainstalowania wymaganych zależności należy w terminalu kolejno wpisać:
 
-1) cd Concurrent Gauss Elimination
-2) conda env create -f environment.yml
-3) conda activate Concurrent-Gauss-Elimination
-4) python main.py
+```bash
+cd "Concurrent Gauss Elimination"
+conda env create -f environment.yml
+conda activate Concurrent-Gauss-Elimination
+python main.py
+```
 
 Wyniki działania projektu będą znajdować się w folderze output. Wlasne wejście do programu należy umieścić folderze input, a 
 następnie w pliku main.py podmienić zmienną input na ścieżkę do pliku.
@@ -39,7 +41,7 @@ funkcji traces_run w pliku main.py.
 Funkcje traces_run i scheduler_run w pliku main.py działają niezależnie od siebie, pierwsza jest odpowiedzialna za wyznaczenie
 obiektów matematycznych związanych z teorią śladów, a druga za rozwiązanie układu równań (oczywiście wyznaczając wcześniej klasy Foaty).
 
-# Uruchomienie Checkera
+# Uruchomienie checkera
 
 W celu skorzystania ze sprawdzarki wymagana jest instalacja Javy (przetesowane na wersji 21.0.2). Checker automatycznie
 kompiluje i uruchamia sprawdzarkę korzystając z poleceń 'javac' i 'java'.
