@@ -5,8 +5,8 @@ Projekt wykorzystuje teorię śladów do współbieżnego rozwiązania układu r
 
 Projekt został napisany w języku Python. Opis wykorzystanych modułów znajduje się w pliku environment.yml.
 
-1) input - folder zawierający dane wejściowe
-2) output - folder zawierający pliki:
+1) input - folder zawierający przykładowe dane wejściowe
+2) output - folder zawierający przykładowe dane wyjściowe:
     1) gauss_output.txt - zawiera rozwiązanie układu równań
     2) traces_theory_output.txt - zawiera wyznaczony alfabet w sensie teorii śladów, relację zależności, słowo oraz klasy Foaty
     3) diekert_graph.png - wyrenderowany graf Diekerta dla zadanego układu równań
@@ -28,11 +28,8 @@ W celu zainstalowania wymaganych zależności należy w terminalu kolejno wpisa�
 cd "Concurrent Gauss Elimination"
 conda env create -f environment.yml
 conda activate Concurrent-Gauss-Elimination
-python main.py
+python main.py input/example_input.txt output/gauss_output.txt
 ```
-
-Wyniki działania projektu będą znajdować się w folderze output. Wlasne wejście do programu należy umieścić folderze input, a 
-następnie w pliku main.py podmienić zmienną input na ścieżkę do pliku.
 
 Domyślnie graf Diekerta nie jest rysowany dla macierzy o rozmiarach większych od 10 bo jest on nieczytelny,
 zachowanie to można zmienić ustawiając flagę force_graph na true w
