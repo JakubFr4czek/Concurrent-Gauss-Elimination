@@ -1,4 +1,5 @@
 import os
+import time
 from scheduler import scheduler_run
 
 '''
@@ -69,6 +70,29 @@ def check(n):
     print("Uruchomienie checkera...")
     checker(input, output)
     
-
+def time_check_n(n, filename = 'sprawdzarka/time_measurement/time.txt'):
+    '''
+    Funkcja przelicza czas wykonania algorytmu Gaussa dla macierzy o
+    rozmiarze 3..n
+    '''
+    
+    input = 'input/input.txt'
+    output = 'output/user_output.txt'
+    
+    compile_generator()
+    compile_checker()
+    
+    for i in range(3, n + 1):
+        generate(i)
+        start_time = time.time()
+        scheduler_run('sprawdzarka/' + input, 'sprawdzarka/' + output)
+        end_time = time.time()
+        
+        with open(filename, "a", encoding="utf-8") as file:
+            file.write(f"{i} {end_time - start_time}\n")
+    
 
 check(100)
+
+#time_check_n(100)
+

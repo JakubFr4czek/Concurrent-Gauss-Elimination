@@ -17,7 +17,7 @@ def traces_run(input, output, force_graph):
 
     G = diekert_graph(alphabet, D)
 
-    foaty = get_foaty(alphabet)
+    foaty = get_foaty(w)
 
     if len(matrix) <= 10 or force_graph:
 

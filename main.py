@@ -13,7 +13,7 @@ obiektów matematycznych dotyczących teorii śladów, a druga do wyznaczenia ro
 if len(sys.argv) == 3:
     input = sys.argv[1]
     output = sys.argv[2]
-elif len(sys.argv == 1):
+elif len(sys.argv) == 1:
     input = 'input/example_input.txt'
     output = 'output'
 else:
@@ -22,4 +22,4 @@ else:
 
 traces_run(input, output, force_graph = False)
 
-scheduler_run(input, output)
+scheduler_run(input, output + '/gauss.txt')
