@@ -10,12 +10,15 @@ Projekt został napisany w języku Python. Opis wykorzystanych modułów znajduj
     1) gauss_output.txt - zawiera rozwiązanie układu równań
     2) traces_theory_output.txt - zawiera wyznaczony alfabet w sensie teorii śladów, relację zależności, słowo oraz klasy Foaty
     3) diekert_graph.png - wyrenderowany graf Diekerta dla zadanego układu równań
-3) checker.py - moduł wykorzystujący sprawdzarkę do oceny poprawności kodu (Patrz: sekcja Uruchomienie checkera)
-4) main.py - główny moduł, wywołuje funkcje wyznaczające obiekty matematyczne związane z teorią śladów oraz wyznacza rozwiązanie układu równań
-5) scheduler.py - moduł odpowiedzialny za współbieżne wyznaczenie macierzy trójkątnej górnej przy wykorzystaniu rdzeni CUDA i wyznaczenie rozwiązania układu równań
-6) traces_theory.py - moduł odpowiedzialny za wyznaczenie obiektów matematycznych związanych z teorią śladów
-7) tools.py - funkcje pomocnicze do wyznaczania obiektów matematycznych związanych z teorią śladów
-8) utility.py - funkcje pomocnicze realizujące zapis / odczyt do plików
+3) sprawdzarka - folder zawierający pliki sprawdzarki
+4) sprawozdanie - folder zawierający sprawozdanie z zadania w formacie pdf
+5) environment.yml - folder zawierający zależności potrzebne do uruchomienia projektu
+6) checker.py - moduł wykorzystujący sprawdzarkę do oceny poprawności kodu (Patrz: sekcja Uruchomienie checkera)
+7) main.py - główny moduł, wywołuje funkcje wyznaczające obiekty matematyczne związane z teorią śladów oraz wyznacza rozwiązanie układu równań
+8) scheduler.py - moduł odpowiedzialny za współbieżne wyznaczenie macierzy trójkątnej górnej przy wykorzystaniu rdzeni CUDA i wyznaczenie rozwiązania układu równań
+9) traces_theory.py - moduł odpowiedzialny za wyznaczenie obiektów matematycznych związanych z teorią śladów
+10) tools.py - funkcje pomocnicze do wyznaczania obiektów matematycznych związanych z teorią śladów
+11) utility.py - funkcje pomocnicze realizujące zapis / odczyt do plików
 
 # Uruchommienie projektu
 
